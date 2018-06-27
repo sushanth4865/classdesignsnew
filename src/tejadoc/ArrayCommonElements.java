@@ -1,12 +1,14 @@
 package tejadoc;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by kasir on 4/2/2018.
  */
 public class ArrayCommonElements {
-    //public static void main(String[] args) {
+//    public static void main(String[] args) {
 //        ArrayList<Integer> arrayList1 = new ArrayList<>();
 //        ArrayList<Integer> arrayList2 = new ArrayList<>();
 //        arrayList1.add(2);
@@ -19,14 +21,14 @@ public class ArrayCommonElements {
 //        arrayList1.removeAll(arrayList2);
 //        arrayList2.removeAll(temp);
 //        System.out.println(arrayList1 + "" + arrayList2);
-
-  //  }
+//
+//    }
 //}
 
 //public class Test {
-    public int findCommonElement(int[] a, int[] b){
+    public void findCommonElement(int[] a, int[] b){
 
-        ArrayList<Integer> list = new ArrayList<>();
+        Set<Integer> list = new HashSet<>();
         for(int i=0;i<a.length;i++)
         {
             for (int j=0;j<b.length;j++)
@@ -65,7 +67,7 @@ public class ArrayCommonElements {
 //
 //        }
 //
-        return 0;
+        //return 0;
     }
 
     public static void main(String []args){
@@ -74,7 +76,7 @@ public class ArrayCommonElements {
 
 
         ArrayCommonElements hello = new ArrayCommonElements ();
-        System.out.println(hello.findCommonElement(myArray, myArray2));
+        hello.findCommonElement(myArray, myArray2);
 
     }
 }

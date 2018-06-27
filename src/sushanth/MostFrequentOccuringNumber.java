@@ -15,23 +15,45 @@ public class MostFrequentOccuringNumber {
     }
 
     public static void findMode(List<Integer> list) {
-        int mode ,maxCount=1 ,tempCount=0, maxCountNum=0;
-        for (int i = 0; i < list.size(); i++) {
-            tempCount=0;
-            for (int j = 0; j < list.size(); j++) {
+//        int mode ,maxCount=1 ,tempCount=0, maxCountNum=0;
+//        for (int i = 0; i < list.size(); i++) {
+//            tempCount=0;
+//            for (int j = 0; j < list.size(); j++) {
+//                int t1 = list.get(i);
+//                int t2 = list.get(j);
+//                if (t1 == t2) {
+//                    tempCount++;
+//                    if (tempCount > maxCount) {
+//                        maxCountNum = list.get(i);
+//                        maxCount = tempCount;
+//                    }
+//                }
+//            }
+//        }
+//        System.out.println(maxCount);
+//        System.out.println(maxCountNum);
+        int maxCountNum = 0;
+        int maxCount = 1;
+        for(int i = 0; i< list.size();i++)
+        {
+            int tempCount = 0;
+            for(int j = 0;j<list.size();j++)
+            {
                 int t1 = list.get(i);
                 int t2 = list.get(j);
-                if (t1 == t2) {
+                if(t1==t2)
+                {
                     tempCount++;
-                    if (tempCount > maxCount) {
+                    if(tempCount>maxCount)
+                    {
                         maxCountNum = list.get(i);
                         maxCount = tempCount;
                     }
                 }
             }
         }
-        System.out.println(maxCount);
         System.out.println(maxCountNum);
+        System.out.println(maxCount);
     }
 
     public static void main(String[] args) {
